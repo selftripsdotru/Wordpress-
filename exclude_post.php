@@ -1,4 +1,5 @@
- function exclude_cat_from_previous_next_JOIN( $join = null, $in_same_cat = false, $excluded_categories = '' ) {
+```<?php
+function exclude_cat_from_previous_next_JOIN( $join = null, $in_same_cat = false, $excluded_categories = '' ) {
     if ( is_admin() ) {
         return $join;
     } else {
@@ -52,3 +53,4 @@ foreach ($result as &amp;$value) {
 }
 add_filter( 'get_next_post_where', 'exclude_cat_from_previous_next_WHERE', 10, 3);
 add_filter( 'get_previous_post_where', 'exclude_cat_from_previous_next_WHERE', 10, 3);
+?>
